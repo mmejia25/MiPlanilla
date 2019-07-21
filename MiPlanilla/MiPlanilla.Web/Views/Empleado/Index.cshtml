@@ -1,0 +1,39 @@
+﻿@model List<MiPlanilla.BL.Empleado>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Empleados</h2>
+
+<table class="table table-bordered table-hover">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Salario</th>
+            <th>Estatus</th>
+            <th>Cargo</th>
+            <th>FechaIngreso</th>
+        </tr>
+
+    </thead>
+
+     @foreach (var empleado in Model)
+
+     {
+         <tr>
+             <td>@empleado.Id</td>
+             <td>@empleado.Nombres</td>
+             <td>@empleado.Apellidos</td>
+             <td>@empleado.Salario</td>
+             <td>@empleado.Estatus</td>
+             <td>@empleado.Cargo</td>
+             <td>@empleado.FechaIngreso </td>
+
+         </tr>
+     }
+
+
+</table>
