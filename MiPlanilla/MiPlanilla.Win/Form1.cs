@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiPlanilla.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,33 @@ namespace MiPlanilla.Win
         public Form1()
         {
             InitializeComponent();
+            var empleadobl = new EmpleadoBL();
+            var listadeempleados = empleadobl.Obtener();
+
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+         
+      
+
+         }
+
+        private void empleadoBLDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

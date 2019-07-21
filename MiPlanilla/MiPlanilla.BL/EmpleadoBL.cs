@@ -9,15 +9,19 @@ namespace MiPlanilla.BL
     public class EmpleadoBL
     {
         Contexto _contexto;
+        public List<Empleado> listadeEmpleados { get; set; }
+
         public EmpleadoBL()
         {
             _contexto = new Contexto();
+            listadeEmpleados = new List<Empleado>();
         }
 
         public List<Empleado> Obtener()
         {
 
-            return _contexto.Empleados.ToList();
+            listadeEmpleados = _contexto.Empleados.ToList();
+            return listadeEmpleados; 
         }
     }
 }
