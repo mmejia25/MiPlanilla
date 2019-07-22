@@ -19,7 +19,7 @@ namespace MiPlanilla.Win
             var empleadobl = new EmpleadoBL();
             var listadeempleados = empleadobl.Obtener();
 
-            
+            listadeEmpleadosBindingSource.DataSource = listadeempleados;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -27,7 +27,6 @@ namespace MiPlanilla.Win
 
          
       
-
          }
 
         private void empleadoBLDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -35,10 +34,7 @@ namespace MiPlanilla.Win
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label1_Click(object sender, EventArgs e)
         {

@@ -44,9 +44,9 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.empleadoBLBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.empleadoBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listadeEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listadeEmpleadosDataGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,13 +54,13 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.listadeEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.empleadoBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBLBindingNavigator)).BeginInit();
             this.empleadoBLBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeEmpleadosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeEmpleadosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeEmpleadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // empleadoBLBindingNavigator
@@ -90,7 +90,7 @@
             this.empleadoBLBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.empleadoBLBindingNavigator.Name = "empleadoBLBindingNavigator";
             this.empleadoBLBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.empleadoBLBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.empleadoBLBindingNavigator.Size = new System.Drawing.Size(788, 25);
             this.empleadoBLBindingNavigator.TabIndex = 2;
             this.empleadoBLBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -188,15 +188,6 @@
             this.empleadoBLBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.empleadoBLBindingNavigatorSaveItem.Text = "Guardar datos";
             // 
-            // empleadoBLBindingSource
-            // 
-            this.empleadoBLBindingSource.DataSource = typeof(MiPlanilla.BL.EmpleadoBL);
-            // 
-            // listadeEmpleadosBindingSource
-            // 
-            this.listadeEmpleadosBindingSource.DataMember = "listadeEmpleados";
-            this.listadeEmpleadosBindingSource.DataSource = this.empleadoBLBindingSource;
-            // 
             // listadeEmpleadosDataGridView
             // 
             this.listadeEmpleadosDataGridView.AutoGenerateColumns = false;
@@ -210,10 +201,31 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.listadeEmpleadosDataGridView.DataSource = this.listadeEmpleadosBindingSource;
-            this.listadeEmpleadosDataGridView.Location = new System.Drawing.Point(37, 75);
+            this.listadeEmpleadosDataGridView.Location = new System.Drawing.Point(21, 91);
             this.listadeEmpleadosDataGridView.Name = "listadeEmpleadosDataGridView";
-            this.listadeEmpleadosDataGridView.Size = new System.Drawing.Size(742, 220);
+            this.listadeEmpleadosDataGridView.Size = new System.Drawing.Size(742, 161);
             this.listadeEmpleadosDataGridView.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(293, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 22);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Lista de Empleados";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -257,44 +269,35 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "FechaIngreso";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // label1
+            // listadeEmpleadosBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(317, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 22);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Lista de Empleados";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.listadeEmpleadosBindingSource.DataMember = "listadeEmpleados";
+            this.listadeEmpleadosBindingSource.DataSource = this.empleadoBLBindingSource;
             // 
-            // toolStripButton1
+            // empleadoBLBindingSource
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.empleadoBLBindingSource.DataSource = typeof(MiPlanilla.BL.EmpleadoBL);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::MiPlanilla.Win.Properties.Resources.cy;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(788, 347);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listadeEmpleadosDataGridView);
             this.Controls.Add(this.empleadoBLBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleados";
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBLBindingNavigator)).EndInit();
             this.empleadoBLBindingNavigator.ResumeLayout(false);
             this.empleadoBLBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeEmpleadosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeEmpleadosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeEmpleadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

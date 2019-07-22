@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto.cs" />
+    <Compile Include="Departamento.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="EmpleadoBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -23,5 +23,15 @@ namespace MiPlanilla.BL
             listadeEmpleados = _contexto.Empleados.ToList();
             return listadeEmpleados; 
         }
+
+
+       public void GuardarEmpleado(Empleado producto)
+        {
+
+            _contexto.Empleados.Add(producto);
+            _contexto.SaveChanges();
+        }
     }
+
+
 }
