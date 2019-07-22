@@ -40,5 +40,25 @@ namespace MiPlanilla.WebAdmin.Controllers
 
             return RedirectToAction("Index");
         }
+
+
+        public ActionResult Editar(int Id)
+        {
+            var empleado = _empleadosBL.ObtenerEmpleado(Id);
+
+            return View(empleado);
+        }
+
+        [HttpPost]
+        public ActionResult Editar (Empleado empleado)
+        {
+
+            _empleadosBL.GuardarEmpleado(empleado);
+            return RedirectToAction("Index");
+        }
+
+
+
+
     }
 }

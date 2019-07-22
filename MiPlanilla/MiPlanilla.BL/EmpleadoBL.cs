@@ -28,9 +28,32 @@ namespace MiPlanilla.BL
        public void GuardarEmpleado(Empleado producto)
         {
 
-            _contexto.Empleados.Add(producto);
+            if (producto.Id == 0)
+            {
+                _contexto.Empleados.Add(producto);
+            }else
+            {
+                var empleadoexistente = _contexto.Empleados.Find(producto.Id);
+                empleadoexistente.Nombres = producto.Nombres;
+                empleadoexistente.Apellidos = producto.Apellidos;
+                empleadoexistente.Cargo = producto.Cargo;
+                empleadoexistente.Estatus = producto.Estatus;
+                empleadoexistente.Salario = producto.Salario;
+            }
+            
             _contexto.SaveChanges();
         }
+
+        public Empleado ObtenerEmpleado(int Id)
+        {
+
+            var empleado = _contexto.Empleados.Find(Id);
+             
+            return empleado;
+        }
+
+       
+
     }
 
 
