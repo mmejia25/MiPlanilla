@@ -16,7 +16,6 @@ namespace MiPlanilla.Web.Controllers
             var empleadoBL = new EmpleadoBL();
             var ListadeEmpleados = empleadoBL.Obtener();
             
-
             return View(ListadeEmpleados);
         }
     }

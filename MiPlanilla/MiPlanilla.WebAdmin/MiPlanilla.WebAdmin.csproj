@@ -108,12 +108,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Empleados\Index.cshtml" />
-    <Content Include="Views\Empleados\Crear.cshtml" />
     <Content Include="Views\Empleados\Editar.cshtml" />
+    <Content Include="Views\Empleados\Detalle.cshtml" />
+    <Content Include="Views\Empleados\Eliminar.cshtml" />
+    <Content Include="Views\Cargos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CargosController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -131,6 +133,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Cargos\Crear.cshtml" />
+    <Content Include="Views\Empleados\Index.cshtml" />
+    <Content Include="Views\Empleados\Crear.cshtml" />
+    <Content Include="Views\Cargos\Editar.cshtml" />
+    <Content Include="Views\Cargos\Eliminar.cshtml" />
+    <Content Include="Views\Cargos\Detalle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

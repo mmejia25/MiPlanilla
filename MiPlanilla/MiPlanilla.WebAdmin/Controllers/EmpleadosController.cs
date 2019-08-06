@@ -11,24 +11,29 @@ namespace MiPlanilla.WebAdmin.Controllers
     {
 
         EmpleadoBL _empleadosBL;
+        CargosBL _cargoBL;
 
 
         public EmpleadosController()
         {
             _empleadosBL = new EmpleadoBL();
+            _cargoBL = new CargosBL();
         }
         // GET: Empleados
+      
         public ActionResult Index()
         {
-            var ListadeProductos = _empleadosBL.Obtener();
-            return View(ListadeProductos);
+            var ListadeEmpleados = _empleadosBL.Obtener();
+            return View(ListadeEmpleados);
         }
 
 
         public ActionResult Crear()
         {
             var NuevoEmpleado = new Empleado();
+            var cargos = _cargoBL.Obtener();
 
+            ViewBag.ListaCargos = new SelectList(cargos, "Id", "Descripcion");
 
             return View(NuevoEmpleado);
         }
@@ -42,9 +47,10 @@ namespace MiPlanilla.WebAdmin.Controllers
         }
 
 
-        public ActionResult Editar(int Id)
+        public ActionResult Editar(int Id, int Num)
         {
             var empleado = _empleadosBL.ObtenerEmpleado(Id);
+            
 
             return View(empleado);
         }
@@ -57,8 +63,30 @@ namespace MiPlanilla.WebAdmin.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Detalle (int Id)
+        {
+            var empleado = _empleadosBL.ObtenerEmpleado(Id);
+
+            return View(empleado);
+        }
 
 
+        public ActionResult Eliminar(int Id)
+        {
+            var empleado = _empleadosBL.ObtenerEmpleado(Id);
+
+            return View(empleado);
+        }
+
+        [HttpPost]
+        public  ActionResult Eliminar(Empleado empleado)
+        {
+            
+
+            _empleadosBL.EliminarEmpleado(empleado.Id);
+            return RedirectToAction("Index");
+
+        }
 
     }
 }

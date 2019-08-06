@@ -48,11 +48,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cargo.cs" />
+    <Compile Include="CargosBL.cs" />
     <Compile Include="Contexto.cs" />
+    <Compile Include="Deducciones.cs" />
+    <Compile Include="DeduccionesBL.cs" />
     <Compile Include="Departamento.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="EmpleadoBL.cs" />
+    <Compile Include="Ingresos.cs" />
+    <Compile Include="IngresosBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provisiones.cs" />
+    <Compile Include="ProvisionesBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

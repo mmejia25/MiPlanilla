@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace MiPlanilla.BL
 {
-   public class Departamento
-    {
-        public int IdDepto { get; set; }
+    public class Cargo
+    {       
+        public int Id { get; set; }
         public String Descripcion { get; set; }
-        public String Estatus { get; set; }
-        public String Observaciones { get; set; }
+        public String Pais { get; set; }
     }
 }

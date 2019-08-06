@@ -25,20 +25,20 @@ namespace MiPlanilla.BL
         }
 
 
-       public void GuardarEmpleado(Empleado producto)
+       public void GuardarEmpleado(Empleado empleado)
         {
 
-            if (producto.Id == 0)
+            if (empleado.Id == 0)
             {
-                _contexto.Empleados.Add(producto);
+                _contexto.Empleados.Add(empleado);
             }else
             {
-                var empleadoexistente = _contexto.Empleados.Find(producto.Id);
-                empleadoexistente.Nombres = producto.Nombres;
-                empleadoexistente.Apellidos = producto.Apellidos;
-                empleadoexistente.Cargo = producto.Cargo;
-                empleadoexistente.Estatus = producto.Estatus;
-                empleadoexistente.Salario = producto.Salario;
+                var empleadoexistente = _contexto.Empleados.Find(empleado.Id);
+                empleadoexistente.Nombres = empleado.Nombres;
+                empleadoexistente.Apellidos = empleado.Apellidos;
+                empleadoexistente.Cargo = empleado.Cargo;
+                empleadoexistente.Estatus = empleado.Estatus;
+                empleadoexistente.Salario = empleado.Salario;
             }
             
             _contexto.SaveChanges();
@@ -48,10 +48,17 @@ namespace MiPlanilla.BL
         {
 
             var empleado = _contexto.Empleados.Find(Id);
+                       
              
             return empleado;
         }
 
+        public void EliminarEmpleado (int Id)
+        {
+            var empleado = _contexto.Empleados.Find(Id);
+            _contexto.Empleados.Remove(empleado);
+            _contexto.SaveChanges();
+        }
        
 
     }

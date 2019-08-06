@@ -19,7 +19,9 @@ namespace MiPlanilla.BL
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
-  
+
+        public DbSet<Cargo> Cargos { get; set; }
         public DbSet<Empleado> Empleados { get; set; }
+        
     }
 }
